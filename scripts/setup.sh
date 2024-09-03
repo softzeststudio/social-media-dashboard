@@ -2,12 +2,18 @@
 
 echo "Setting up the environment..."
 
+# Update and install dependencies
+pkg update && pkg upgrade -y
+pkg install -y python clang make cmake libffi openssl
+
+# Create virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Upgrade pip, setuptools, and wheel
+pip install --upgrade pip setuptools wheel
+
 # Install Python dependencies
 pip install -r requirements.txt
-
-# Copy default config to user config if it doesn't exist
-if [ ! -f config/user_config.yaml ]; then
-    cp config/default_config.yaml config/user_config.yaml
-fi
 
 echo "Setup complete."
