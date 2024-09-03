@@ -1,12 +1,15 @@
 # src/platforms/twitter.py
 
 from core.authentication import AuthenticationManager
+import tweepy
 
 class TwitterAPI:
-    def __init__(self, config):
-        self.api = AuthenticationManager.twitter_auth(config['consumer_key'], config['consumer_secret'],
-                                                      config['access_token'], config['access_token_secret'])
+    def __init__(self, credentials):
+        self.auth_manager = AuthenticationManager(credentials)
+        self.api = self.auth_manager.authenticate_twitter()
 
     def get_feed(self, count=5):
         tweets = self.api.home_timeline(count=count)
         return [{'user': tweet.user.name, 'text': tweet.text} for tweet in tweets]
+    def post_tweet(self, message):
+        self.api.update_status(message)
