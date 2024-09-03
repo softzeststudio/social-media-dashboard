@@ -5,18 +5,16 @@ from platforms.reddit import RedditAPI
 from platforms.mastodon import MastodonAPI
 
 class APIManager:
-    def __init__(self, config):
-        self.twitter_api = TwitterAPI(config['twitter'])
-        self.reddit_api = RedditAPI(config['reddit'])
-        self.mastodon_api = MastodonAPI(config['mastodon'])
+    def __init__(self, credentials):
+        self.twitter_api = TwitterAPI(credentials)
+        self.reddit_api = RedditAPI(credentials)
+        self.mastodon_api = MastodonAPI(credentials)
 
-    def fetch_feeds(self):
-        twitter_feed = self.twitter_api.get_feed()
-        reddit_feed = self.reddit_api.get_feed()
-        mastodon_feed = self.mastodon_api.get_feed()
+    def post_to_twitter(self, message):
+        self.twitter_api.post_tweet(message)
 
-        return {
-            'twitter': twitter_feed,
-            'reddit': reddit_feed,
-            'mastodon': mastodon_feed
-        }
+    def post_to_reddit(self, message):
+        self.reddit_api.submit_post(message)
+
+    def post_to_mastodon(self, message):
+        self.mastodon_api.toot(message)
