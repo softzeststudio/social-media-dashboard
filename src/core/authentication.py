@@ -5,9 +5,35 @@ import praw
 from mastodon import Mastodon
 
 class AuthenticationManager:
-    @staticmethod
-    def twitter_auth(consumer_key, consumer_secret, access_token, access_token_secret):
-        auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    def __init__(self, credentials):
+        self.credentials = credentials
+
+    def authenticate_twitter(self):
+        auth = tweepy.OAuthHandler(
+            self.credentials['twitter']['api_key'],
+            self.credentials['twitter']['api_secret_key']
+        )
+        auth.set_access_token(
+            self.credentials['twitter']['access_token'],
+            self.credentials['twitter']['access_token_secret']
+        )
+        return tweepy.API(auth)
+
+    def authenticate_reddit(self):
+        return praw.Reddit(
+            client_id=self.credentials['reddit']['client_id'],
+            client_secret=self.credentials['reddit']['client_secret'],
+            user_agent=self.credentials['reddit']['user_agent']
+        )
+
+    def authenticate_mastodon(self):
+        return Mastodon(
+            client_id=self.credentials['mastodon']['client_id'],
+            client_secret=self.credentials['mastodon']['client_secret'],
+            access_token=self.credentials['mastodon']['access_token'],
+            api_base_url=self.credentials['mastodon']['api_base_url']
+        )
+
         auth.set_access_token(access_token, access_token_secret)
         return tweepy.API(auth)
 
