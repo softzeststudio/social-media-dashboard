@@ -1,4 +1,3 @@
-# social-media-dashboard
 <!-- Project Title -->
 <h1 align="center">📊 Customizable Terminal-Based Social Media Dashboard</h1>
 
