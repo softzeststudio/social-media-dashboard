@@ -1,13 +1,13 @@
 <!-- Project Title -->
-<h1 align="center">📊 Customizable Terminal-Based Social Media Dashboard</h1>
+<h1 align="center">📱 Customizable Terminal-Based Social Media Dashboard</h1>
 
 <p align="center">
   <b>Manage multiple social media accounts from a single terminal-based dashboard.</b>
   <br>
-  <img src="https://img.shields.io/github/stars/yourusername/social-media-dashboard?style=flat-square">
-  <img src="https://img.shields.io/github/forks/yourusername/social-media-dashboard?style=flat-square">
-  <img src="https://img.shields.io/github/issues/yourusername/social-media-dashboard?style=flat-square">
-  <img src="https://img.shields.io/github/license/yourusername/social-media-dashboard?style=flat-square">
+  <img src="https://img.shields.io/github/stars/softzeststudio/social-media-dashboard?style=flat-square">
+  <img src="https://img.shields.io/github/forks/softzeststudio/social-media-dashboard?style=flat-square">
+  <img src="https://img.shields.io/github/issues/softzeststudio/social-media-dashboard?style=flat-square">
+  <img src="https://img.shields.io/github/license/softzeststudio/social-media-dashboard?style=flat-square">
 </p>
 
 <p align="center">
