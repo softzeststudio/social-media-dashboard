@@ -1,6 +1,6 @@
 # src/platforms/twitter.py
 
-from core.authentication.py import AuthenticationManager
+from core.authentication import AuthenticationManager
 
 class TwitterAPI:
     def __init__(self, config):
