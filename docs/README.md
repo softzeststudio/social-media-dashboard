@@ -19,6 +19,8 @@ This is a customizable terminal-based dashboard for managing multiple social med
 1. Clone the repository:
     ```bash
     git clone https://github.com/yourusername/social-media-dashboard.git
+    ```
+    ```bash
     cd social-media-dashboard
     ```
 
