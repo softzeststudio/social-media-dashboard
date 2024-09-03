@@ -1,0 +1,7 @@
+# requirements.txt
+
+tweepy==4.10.1
+praw==7.6.0
+Mastodon.py==1.5.1
+curses-menu==2.0.0
+PyYAML==6.0

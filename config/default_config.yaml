@@ -1,0 +1,20 @@
+# config/default_config.yaml
+
+twitter:
+  consumer_key: 'your_consumer_key'
+  consumer_secret: 'your_consumer_secret'
+  access_token: 'your_access_token'
+  access_token_secret: 'your_access_token_secret'
+
+reddit:
+  client_id: 'your_client_id'
+  client_secret: 'your_client_secret'
+  user_agent: 'your_user_agent'
+  username: 'your_username'
+  password: 'your_password'
+
+mastodon:
+  client_id: 'your_client_id'
+  client_secret: 'your_client_secret'
+  access_token: 'your_access_token'
+  api_base_url: 'https://mastodon.social'
