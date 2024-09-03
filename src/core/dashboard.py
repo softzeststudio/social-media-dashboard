@@ -2,7 +2,11 @@
 
 import curses
 from core.api_manager import APIManager
-from interfaces.tui_manager import TUIManager
+from core.authentication import AuthenticationManager
+from platforms.twitter import TwitterAPI
+from platforms.reddit import RedditAPI
+from platforms.mastodon import MastodonAPI
+
 
 class SocialMediaDashboard:
     def __init__(self, config):
